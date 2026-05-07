@@ -1,0 +1,115 @@
+:root {
+    --col1: #ffeb9b;
+    --col2: #c77700;
+    --textCl: #000000;
+    --textcl2: #FFFFFF;
+}
+
+body {
+    background-color: var(--col1);
+    margin: 0;
+    padding: 0;
+}
+
+.navBar {
+    display: flex;
+    background-color: var(--col2);
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+
+    margin-bottom: 0;
+
+    .brand {
+        display: flex;
+        margin-left: 5px;
+        align-items: center;
+
+        h1 {
+            display: inline;
+
+            display: none;
+        }
+
+        img {
+            display: inline;
+            border-radius: 5px;
+            height: 40px;
+        }
+
+    }
+
+
+    form {
+        background-color: var(--col1);
+        align-content: center;
+        display: inline;
+        padding: 5px;
+        max-height: 40px;
+        border-radius: 3px;
+
+        .search {
+            width: 15px;
+        }
+
+    }
+
+    .options {
+        a {
+            color: var(--textCl);
+            text-decoration: none;
+            padding: 3vw 20px;
+
+        }
+
+        a:hover {
+            background-color: var(--col1);
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "main"
+        "footer";
+    grid-template-rows: 30vh 4fr 1fr;
+}
+
+.grid .gBanner {
+    grid-area: banner;
+    color: var(--textcl2);
+
+    img {
+        position: absolute;
+        z-index: -1;
+        width: 98vw;
+        height: 30vh;
+        
+        
+    }
+}
+.grid .gMain
+{
+    grid-area: main;
+}
+.grid .gFooter
+{
+    grid-area: footer;
+    background-color: var(--col2);
+    color: var(--textcl2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(min-width: 768px) {
+    .navBar {
+        .brand {
+            h1 {
+                display: inline;
+            }
+        }
+    }
+}
